@@ -1,6 +1,5 @@
-FROM node:8.4
-COPY . /app
-WORKDIR /app
-RUN npm install --registry=https://registry.npm.taobao.org
-EXPOSE 3000
+FROM node
+COPY . /node-file-manager/
+RUN cd /node-file-manager && npm i
+WORKDIR /node-file-manager/lib
 
