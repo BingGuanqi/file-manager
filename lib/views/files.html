@@ -100,6 +100,23 @@
     </div>
   </div>
 
+  <div class="modal fade" id="decompressionModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>解压</h4>
+        </div>
+        <div class="modal-body">
+          <label class="control-label">您确定要解压该文件吗</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="FM.decompress()">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="moveModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -153,7 +170,9 @@
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('upload_file')" data-toggle="modal" data-target="#uploadFileModal"><span class="glyphicon glyphicon-upload"></span> 文件上传</button>
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('move')" data-toggle="modal" data-target="#moveModal"><span class="glyphicon glyphicon-random"></span> 移动</button>
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('rename')" data-toggle="modal" data-target="#renameModal"><span class="glyphicon glyphicon-font"></span> 重命名</button>
-      <!-- <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('archive')" data-toggle="modal" data-target="#archiveModal" ng-click="FM.updateArchiveName()"><span class="glyphicon glyphicon-download-alt"></span> Archive</button> -->
+      <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('archive')" data-toggle="modal" data-target="#archiveModal" ng-click="FM.updateArchiveName()"><span class="glyphicon glyphicon-download-alt"></span> 压缩</button>
+      <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('decompression')" data-toggle="modal" data-target="#decompressionModal"><span class="glyphicon glyphicon-font"></span> 解压</button>
+
     </div>
 
     <ol class="breadcrumb">
